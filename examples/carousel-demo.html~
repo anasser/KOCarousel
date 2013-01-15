@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>KOCarousel Demo</title>
+
+		<!-- The following styling is absolutely not mandatory and should be removed 
+
+		<style>
+		.carousel-item {
+			background-color: #abc;
+		}
+
+
+		.carousel-slider {
+			background-color: yellow;
+		}
+
+		#right {
+			float:left;
+		}
+
+		#carousel-wrapper {
+			float:left;
+		}
+
+		</style>
+-->
+	</head>
+	<body>
+
+		<div id="my_carousel_div">
+			<h2>Items in carousel (<span data-bind="text: carouselItems().length"></span>)</h2>
+			<h2>Page (<span data-bind="text: currentPage"></span>/<span data-bind="text: pagesCount"></span>)</h2>
+
+			<button id="right">&lt;&lt; Right</button>	
+			<ul data-bind="foreach: carouselItems">
+				<li>
+					<div data-bind="text:koItemText"></div>
+					<button data-bind="text:removeKoItem, click:$root.removeItem"></button>
+				</li>
+			</ul>
+			<button id="left">Left >></button>
+		</div>
+
+		<script type="text/javascript" src="../lib/jquery.min.js"></script>
+		<script type="text/javascript" src="../lib/knockout-2.2.0.js"></script>
+		<script type="text/javascript" src="../ko-carousel.js"></script>
+		<script type="text/javascript" src="my-carousel.js"></script>
+
+
+	</body>
+</html>
+
+
+
+
+
